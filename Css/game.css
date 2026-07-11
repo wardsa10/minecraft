@@ -2,44 +2,59 @@
  body {
     margin: 0;
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 100px 150px 1fr;
     grid-template-rows: 100px 1fr 100px;
     grid-template-areas:
-        "header header header"
+        "aside header header"
+         
         "toolbar world world"
         "toolbar world world "
         "inventory inventory inventory"
         ;
-    height: 100vh;
-     background: #111;
-  color: white;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
+#nameOfGamer
+{
+  color:#000000;
+ 
+  width: 500px;
+  margin-left: 400px;
+ 
+}
 .header {
   
-  grid-area: header; background: rgb(3, 0, 0); 
+  grid-area: header; 
   
   color: rgb(255, 255, 255); 
 justify-content: center;
 
   padding: 10px;
-  background: #222;
+ 
   text-align: center;
   width: auto;
+ 
 
-
+gap: 20px;
 }
 
 
 
 .toolbar { 
   grid-area: toolbar;
+ 
 justify-content: center;
-   background-color: rgb(172, 14, 14);
-height: auto;
-padding-top: 100px;
+  margin-left: 30px;
+height: 100px;
+width: 100px;
+padding-top: 70px;
 padding-left: 10px;
+ gap: 20px;
+
 
  }
 
@@ -51,8 +66,8 @@ padding-left: 10px;
 .toolbar button {
   margin: 5px;
   padding: 5px;
-  width: 70px;
-  height: 30px;
+ 
+
 }
 
 
@@ -67,8 +82,8 @@ padding-left: 10px;
   
   grid-area: world;
 
-margin-top: 10px;
-padding-left: 100px;
+margin-top: 20px;
+padding-left: 250px;
 padding-top: 50px;
 }
 
@@ -78,8 +93,89 @@ padding-top: 50px;
   
   
   grid-area: inventory;
-  background-color: rgb(233, 135, 7);
+  background-color: rgb(255, 2, 2);
+  
 
+}
+
+
+ button{
+  width: 200px;
+  height: 50px;
+  background-color: red;
+
+}
+
+ button:hover{
+  background-color: black;
+  color: white;
+   transform: scale(1.1);
+}
+
+#playerName {
+
+
+  font-size: 25px;
+}
+
+.worldModes button{
+  gap: 20px;
+}
+
+
+.modeButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ff0000;
+    transition: 0.3s;
+}
+
+.modeButton:hover {
+    transform: scale(1.05);
+}
+
+.modeButton.active {
+    background-color: #000000;
+    color: white;
+}
+
+
+
+.toolButton {
+    width: 100px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.toolchossed{
+   background-color: #000000;
+    color: white;
+}
+
+
+.toolButton img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+.world {
+    display: grid;
+    grid-template-columns: repeat(15, 50px);
+    grid-template-rows: repeat(6, 50px);
+    gap: 2px;
+
+    width: fit-content;
+  
+   
 }
 
 
@@ -87,54 +183,115 @@ padding-top: 50px;
 
 
 
-.row {
+
+
+.block img {
+     width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+
+
+.block:hover {
+    transform: scale(1.1);
+    border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+.inventory {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+    text-align: center;
+  gap: 15px;
+}
+
+.inventoryItem {
+  display: flex;
+  align-items: center;
+   justify-content: center;
+ 
+  gap: 10px;
 }
 
 
 
-.grass {
-  background: #3cb043;
-}
-
-.sand {
-  background: #d2b48c;
-}
-
-.snow {
-  background: #ffffff;
+.inventoryItem img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
 }
 
 
+.inventoryItem:hover{
+  transform: scale(1.1);
+    border: 2px solid white;
+}
 
-
-.cell {
-  width: 20px;
-  height: 20px;
-  position: relative;
+.invetoryChoosed{
+  transform: scale(1.1);
+    border: 2px solid white;
+    background-color: #000000;
+    color: white;
 }
 
 
-
-.tile {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
+.aside {
+  grid-area:aside ;
+background-color: transparent;
+ display: flex;
+    
+   width: 100px;
+   margin-left: 30px;
+   margin-top: 30px;
+   gap: 50px;
 }
-
-
-
-
-
-
-.empty {
-  background: #111;
-}
-
-.tree {
-  background-image: radial-gradient(green, darkgreen);
+.aside button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 
 
+
+
+.aside img{
+  width: 50px;
+  height: 50px;
+}
+.home{
+  width: 10px;
+  height: 10px;
+}
+
+resetInventoryButton{
+
+ width: 10px;
+  height: 10px;
+}
+
+
+
+
+
+
+
+
+
+.homeButton:hover {
+  transform: scale(1.1);
+}
+
+.homeButton:checked {
+  transform: scale(1.1);
+}

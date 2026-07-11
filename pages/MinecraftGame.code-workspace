@@ -1,0 +1,20 @@
+{
+  "folders": [
+	{
+		"name": "MinecraftGame",
+		"path": "../../MinecraftGame"
+	},
+	{
+		"name": "Css",
+		"path": "../Css"
+	},
+	{
+		"name": "pages",
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.multiRootWorkspaceName": "pages"
+  }
+}

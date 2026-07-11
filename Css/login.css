@@ -1,0 +1,73 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to bottom, #060000, #ff0000);
+    font-family: Arial, sans-serif;
+}
+
+/* Card */
+.login-container {
+    width: 350px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    
+}
+
+/* Form */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Title */
+#loginForm h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Input */
+#loginForm input {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: .3s;
+}
+
+#loginForm input:focus {
+    border-color: #000901;
+}
+
+/* Button */
+#loginForm button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #000000;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#loginForm button:hover {
+    background: #ff0000;
+    transform: scale(1.03);
+}

@@ -1,16 +1,14 @@
-const usernameInput = document.getElementById("username");
-const startBtn = document.getElementById("startBtn");
-const playername = document.getElementById("playerName");
-startBtn.addEventListener("click", () => {
-  let username = usernameInput.value;
 
-  if (!username) {
-    alert("Please enter your name");
-    return;
+const loginForm = document.getElementById("loginForm");
+
+const username = document.getElementById("username");
+
+loginForm.addEventListener("submit", (e) => {
+     e.preventDefault(); 
+  if (username === "") {
+   alert("please filed username input to start play")
   }
+     localStorage.setItem("username", username.value);
+   window.location.href = "landing.html";
 
-  localStorage.setItem("username", username);
- 
-
-  window.location.href = "game.html";
-});
+})

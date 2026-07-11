@@ -5,23 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
 
+
+  <link rel="stylesheet" href="../Css/login.css">
  
-  <link rel="stylesheet" href="../Css/logIn.css" />
+  
 </head>
 
 <body>
+<form id="loginForm">
+    <h2>Log In</h2>
 
-  <div class="login-container">
+    <label for="username">Username</label>
+    <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+    >
 
-    <h1>Minecraft 2D</h1>
+    <button type="submit">Log In</button>
+</form>
 
-    <input type="text" id="username" placeholder="Enter your name" />
-
-    <button id="startBtn">Start Game</button>
-
-  </div>
-
-  <script src="../JavaScript/logIn.js"></script>
-
+<script src="../JavaScript/login.js"></script>
 </body>
 </html>
