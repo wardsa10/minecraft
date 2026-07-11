@@ -301,26 +301,99 @@ resetInventoryButton{
 .rotate-message {
   display: none;
 }
-
-@media (max-width: 768px) and (orientation: portrait) {
-  .rotate-message {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 20px;
-    z-index: 9999;
-    padding: 20px;
+/* ============================================================
+   LANDSCAPE PHONES — target by height, not width
+   ============================================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 40px 1fr 60px;
+    grid-template-areas:
+      "aside header"
+      "toolbar world"
+      "inventory inventory";
+    height: 100vh;
+    overflow: hidden;
   }
 
-  body > *:not(.rotate-message) {
-    display: none;
+  .header {
+    padding: 2px;
+    font-size: 12px;
+  }
+
+  #nameOfGamer {
+    width: auto;
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  .modeButton {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .toolbar {
+    width: 60px;
+    height: auto;
+    margin-left: 0;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .toolButton {
+    width: 50px;
+    height: 40px;
+  }
+
+  .toolButton img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .world {
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(15, 22px);
+    grid-template-rows: repeat(6, 22px);
+    overflow: auto;
+  }
+
+  .block img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .aside {
+    width: 60px;
+    margin: 0;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+  }
+
+  .aside img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .inventory {
+    height: 60px;
+    padding: 4px;
+    gap: 4px;
+    overflow-x: auto;
+  }
+
+  .inventoryItem img {
+    width: 20px;
+    height: 20px;
+  }
+
+  button {
+    height: 32px;
+    min-width: 32px;
+    padding: 4px 8px;
   }
 }
