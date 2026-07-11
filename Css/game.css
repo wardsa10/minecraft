@@ -295,7 +295,9 @@ resetInventoryButton{
 
 
 
-
+ .rotate-message {
+  display: none;
+}
 
 
 
@@ -313,9 +315,7 @@ resetInventoryButton{
     height: 100vh;
     overflow: hidden;
   }
-  .rotate-message {
-  display: none;
-}
+ 
 
   .header {
     padding: 2px;
@@ -425,5 +425,8 @@ resetInventoryButton{
     height: 32px;
     min-width: 32px;
     padding: 4px 8px;
+  }
+    body > *:not(.rotate-message) {
+    display: none;
   }
 }
