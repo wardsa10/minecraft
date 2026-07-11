@@ -1,4 +1,4 @@
-
+@media (max-width: 768px) {
  body {
     margin: 0;
     display: grid;
@@ -16,7 +16,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
+}
 
 #nameOfGamer
 {
