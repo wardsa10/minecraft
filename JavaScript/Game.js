@@ -367,3 +367,12 @@ class Game {
 // ============================================================
 
 new Game();
+
+async function lockLandscape() {
+  try {
+    await document.documentElement.requestFullscreen();
+    await screen.orientation.lock("landscape");
+  } catch (err) {
+    console.log("Cannot lock orientation:", err);
+  }
+}
