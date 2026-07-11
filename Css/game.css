@@ -356,6 +356,7 @@ resetInventoryButton{
    justify-self: center;
     align-self: center;
     margin: 20px;
+    margin-top: 50px;
     grid-template-columns: repeat(15, 22px);
     grid-template-rows: repeat(6, 22px);
     width: 100%;
