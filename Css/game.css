@@ -357,6 +357,8 @@ resetInventoryButton{
     padding: 0;
     grid-template-columns: repeat(15, 22px);
     grid-template-rows: repeat(6, 22px);
+    width: 100%;
+    height: 100%;
     overflow: auto;
   }
 
@@ -379,11 +381,36 @@ resetInventoryButton{
     height: 24px;
   }
 
+  .home,
+  .resetInventoryButton {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+  }
+
+  .home img,
+  .resetInventoryButton img {
+    width: 24px;
+    height: 24px;
+  }
+
   .inventory {
     height: 60px;
     padding: 4px;
     gap: 4px;
     overflow-x: auto;
+    align-items: center;
+  }
+
+  .inventoryText {
+    font-size: 12px;
+    margin: 0 8px;
+    white-space: nowrap;
+  }
+
+  .inventoryItem {
+    flex-shrink: 0;
   }
 
   .inventoryItem img {
