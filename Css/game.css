@@ -353,8 +353,8 @@ resetInventoryButton{
   }
 
   .world {
-    margin: 0;
-    padding: 0;
+   justify-self: center;
+    align-self: center;
     grid-template-columns: repeat(15, 22px);
     grid-template-rows: repeat(6, 22px);
     width: 100%;
